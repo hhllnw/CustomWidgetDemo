@@ -21,6 +21,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".activity.YZMActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.BallMoveActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

@@ -68,7 +68,7 @@ public class BallMoveView extends View {
         int width = getMeasuredWidth();//组件宽度
         if (x <= radius) {
             dircetion = true;
-        } else if (x > width - radius) {
+        } else if (x >= width - radius) {
             dircetion = false;
         }
 

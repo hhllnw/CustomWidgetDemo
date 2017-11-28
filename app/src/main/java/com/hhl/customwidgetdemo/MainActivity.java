@@ -12,11 +12,12 @@ import com.github.hhllnw.pullrecyclerviewlibrary.BaseViewHolder;
 import com.github.hhllnw.pullrecyclerviewlibrary.PullRecycler;
 import com.hhl.customwidgetdemo.activity.BallMoveActivity;
 import com.hhl.customwidgetdemo.activity.FirstActivity;
+import com.hhl.customwidgetdemo.activity.LineActivity;
 import com.hhl.customwidgetdemo.activity.YZMActivity;
 
 public class MainActivity extends BaseListActivity<MainActivity.ListItem> {
 
-    private Class<?>[] ACTIVITY = {FirstActivity.class, YZMActivity.class, BallMoveActivity.class};
+    private Class<?>[] ACTIVITY = {FirstActivity.class, YZMActivity.class, BallMoveActivity.class, LineActivity.class};
 
     @Override
     protected void init() {

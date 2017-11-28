@@ -23,6 +23,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.BallMoveActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LineActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

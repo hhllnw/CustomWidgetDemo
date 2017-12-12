@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 
+import cn.magicwindow.Session;
+
 /**
  * Created by hhl on 2017/11/21.
  */
@@ -54,5 +56,17 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onPause() {
+        Session.onPause(this);
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        Session.onResume(this);
+        super.onResume();
     }
 }

@@ -1,7 +1,5 @@
 package com.hhl.customwidgetdemo;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 
 import com.github.hhllnw.pullrecyclerviewlibrary.BaseViewHolder;
@@ -18,15 +16,19 @@ import java.util.List;
  * Created by hhl on 2017/11/17.
  */
 
-public abstract class BaseListActivity<T> extends AppCompatActivity implements PullRecycler.OnRecyclerRefreshListener{
+public abstract class BaseListActivity<T> extends BaseActivity implements PullRecycler.OnRecyclerRefreshListener{
     protected List<T> mData;
     protected PullRecycler mPullRecycler;
     protected BaselistAdapter baselistAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void setCustomContentView() {
         setCustomContentView(R.layout.lay_pullrecycler);
+    }
+
+    @Override
+    protected void initView() {
+
         mPullRecycler = $(R.id.mPullRecycler);
         mData = new ArrayList<>();
         baselistAdapter = new MyListAdapter();
@@ -43,6 +45,12 @@ public abstract class BaseListActivity<T> extends AppCompatActivity implements P
         init();
 
         mPullRecycler.setFirstRefresh();
+
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     protected void setCustomContentView(int resId){

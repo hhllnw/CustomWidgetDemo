@@ -15,13 +15,19 @@ import com.hhl.customwidgetdemo.activity.FirstActivity;
 import com.hhl.customwidgetdemo.activity.LineActivity;
 import com.hhl.customwidgetdemo.activity.YZMActivity;
 
+import cn.magicwindow.MLinkAPIFactory;
+import cn.magicwindow.mlink.annotation.MLinkDefaultRouter;
+import cn.magicwindow.mlink.annotation.MLinkRouter;
+
+@MLinkDefaultRouter
+@MLinkRouter(keys={"hhl"})
 public class MainActivity extends BaseListActivity<MainActivity.ListItem> {
 
     private Class<?>[] ACTIVITY = {FirstActivity.class, YZMActivity.class, BallMoveActivity.class, LineActivity.class};
 
     @Override
     protected void init() {
-
+        MLinkAPIFactory.createAPI(this).deferredRouter();
     }
 
     @Override

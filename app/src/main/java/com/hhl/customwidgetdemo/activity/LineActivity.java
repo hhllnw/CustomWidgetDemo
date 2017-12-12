@@ -15,7 +15,6 @@ public class LineActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
     }
 
     @Override

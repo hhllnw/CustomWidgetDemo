@@ -19,6 +19,12 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs'libs'
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     /*androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -28,4 +34,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
     //testCompile 'junit:junit:4.12'
     compile 'com.github.hhllnw:PullRecyclerView:-SNAPSHOT'
+    compile(name:'eaccount_sdk_android_201708232115_aar-debug', ext:'aar')
+    compile 'cn.magicwindow:MagicWindowSDK:4.1'
 }

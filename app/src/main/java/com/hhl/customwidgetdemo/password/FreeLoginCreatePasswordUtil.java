@@ -122,4 +122,5 @@ public class FreeLoginCreatePasswordUtil {
 		}
 		return password.toString();
 	}
+	//testPassword:P5JNYwfgdNt6gxVo9xeiNqkR5si7bDLzLi6EpzVko6dNW
 }

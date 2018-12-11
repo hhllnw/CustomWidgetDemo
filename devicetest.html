@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<meta name="format-detection" content="telephone=no">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+<head>
+    <script src="cordova.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+    </script>
+    <script type="text/javascript" charset="utf-8">
+	//定义一个标志位，若值为0表示设备未完成加载
+	var isready=0;
+	//设置触发器函数onDeviceReady()
+	document.addEventListener("deviceready", onDeviceReady, false);
+	// PhoneGap加载完毕，现在可以安全地调用PhoneGap方法
+	function onDeviceReady() {
+	   // 现在可以安全使用PhoneGap API
+	   //标志位表明设备已经准备好了
+	   isready=1;
+	}
+	function get_info()
+	{
+		if(isready==1)
+		{
+			Dialog.show('Hello World!!!!');
+		}
+	}
+</script>
+    <style>
+/*CSS中利用*表示所有样式，将页面内的全部边距清零*/
+*
+{
+	margin:0;
+	padding:0;
+}
+/*使用CSS3的渐变效果设置背景颜色*/
+body
+{ 
+	height:600px;
+	background:-webkit-linear-gradient(yellow,orange,red,green,blue,purple);
+} 
+/*重写h2标签的字体颜色*/
+h2{ color:#fff; margin:5px; }
+/*利用绝对定位为按钮提供可靠的位置*/
+.button_rec
+{
+	width:100%;
+	height:80px;
+	bottom:50px;
+	position:absolute;
+}
+/*设置按钮的大小和位置*/
+.button_main
+{
+	width:100%;
+	height:80px;
+	position:relative;
+}
+/*按钮的样式*/
+.button
+{
+	width:70%;
+	height:80px; margin-left:15%;
+	background:-webkit-radial-gradient(white,yellow);
+	border:9px solid #F00;
+	border-radius:25px;
+	-webkit-border-radius:25px;
+	font-weight:900;
+	font-size:32px;
+	line-height:80px;
+	text-align:center;
+}
+/*使按钮在被点击时改变为红色，使应用具有更强的交互性*/
+.button:active
+{
+	background:#f00;
+}
+</style>
+</head>
+<body>
+<h2 id="deviceProperties">点击屏幕下方的按钮，系统将会自动获取设备信息。</h2>
+<div class="button_rec">
+    <div class="button_main">
+        <div class="button" onclick="get_info();">
+            获取设备信息
+        </div>
+    </div>
+    <div>
+</body>
+</html>
